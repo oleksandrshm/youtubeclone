@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Clone</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        .header {
+            background-color: #FFFFFF;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .menu-icon {
+            display: flex;
+            align-items: center;
+        }
+
+        .menu-icon img {
+            height: 20px;
+            margin-right: 16px;
+            cursor: pointer;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 20px;
+            margin-right: 8px;
+        }
+
+        .search-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex: 1;
+        }
+
+        .search-bar {
+            display: flex;
+            align-items: center;
+            background-color: #FFFFFF;
+            border-radius: 24px;
+            padding: 0;
+            border: 1px solid #CCCCCC;
+            width: 100%;
+            max-width: 600px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .search-bar input {
+            border: none;
+            background: none;
+            outline: none;
+            padding: 10px 12px;
+            font-size: 16px;
+            flex: 1;
+            border-top-left-radius: 24px;
+            border-bottom-left-radius: 24px;
+        }
+
+        .search-bar button {
+            border: none;
+            background: #F8F8F8;
+            cursor: pointer;
+            padding: 10px;
+            border-top-right-radius: 24px;
+            border-bottom-right-radius: 24px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-left: 1px solid #CCCCCC;
+        }
+
+        .search-bar button img {
+            width: 20px;
+            height: 20px;
+        }
+
+        .right-icons {
+            display: flex;
+            align-items: center;
+        }
+
+        .right-icons img {
+            height: 24px;
+            margin-left: 20px;
+            cursor: pointer;
+        }
+
+        .main-content {
+            display: flex;
+            margin-top: 70px;
+            padding: 20px;
+        }
+
+        .video-container {
+            flex: 2;
+            margin-right: 20px;
+        }
+
+        .video-container iframe {
+            width: 100%;
+            height: 500px;
+            border: none;
+        }
+
+        .video-details {
+            margin-top: 10px;
+        }
+
+        .video-details h1 {
+            font-size: 24px;
+            margin: 0;
+        }
+
+        .video-details p {
+            color: #606060;
+            margin: 5px 0;
+        }
+
+        .recommended-videos {
+            flex: 1;
+        }
+
+        .recommended-video {
+            display: flex;
+            margin-bottom: 10px;
+        }
+
+        .recommended-video img {
+            width: 168px;
+            height: 94px;
+            margin-right: 10px;
+        }
+
+        .recommended-video div {
+            flex: 1;
+        }
+
+        .recommended-video h3 {
+            font-size: 14px;
+            margin: 0;
+        }
+
+        .recommended-video p {
+            color: #606060;
+            font-size: 12px;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="menu-icon">
+            <img src="https://img.icons8.com/ios-filled/50/menu--v1.png" alt="Menu Icon">
+        </div>
+        <div class="logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" alt="YouTube Logo">
+        </div>
+        <div class="search-container">
+            <div class="search-bar">
+                <input type="text" placeholder="Пошук">
+                <button type="submit">
+                    <img src="https://img.icons8.com/ios-glyphs/30/search--v1.png" alt="Search">
+                </button>
+            </div>
+        </div>
+        <div class="right-icons">
+            <img src="https://img.icons8.com/ios-filled/50/upload.png" alt="Upload">
+            <img src="https://img.icons8.com/ios-filled/50/user.png" alt="User">
+        </div>
+    </div>
+    <div class="main-content">
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/qz0aGYrrlhU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="video-details">
+                <h1>HTML за 5 хвилин</h1>
+                <p>Аарон Джек</p>
+                <p>387 973 переглядів • 3 роки тому</p>
+            </div>
+        </div>
+        <div class="recommended-videos">
+            <div class="recommended-video">
+                <img src="https://img.youtube.com/vi/qz0aGYrrlhU/default.jpg" alt="Video 1">
+                <div>
+                    <h3>CSS за 5 хвилин</h3>
+                    <p>Аарон Джек</p>
+                    <p>120 375 переглядів • 3 роки тому</p>
+                </div>
+            </div>
+            <div class="recommended-video">
+                <img src="https://img.youtube.com/vi/qz0aGYrrlhU/default.jpg" alt="Video 2">
+                <div>
+                    <h3>Вивчіть HTML за 1 годину</h3>
+                    <p>Бро код</p>
+                    <p>1,8 млн переглядів • 2 роки тому</p>
+                </div>
+            </div>
+            <div class="recommended-video">
+                <img src="https://img.youtube.com/vi/qz0aGYrrlhU/default.jpg" alt="Video 3">
+                <div>
+                    <h3>5 етапів навчання програмуванню</h3>
+                    <p>Аарон Джек</p>
+                    <p>679 039 переглядів • 3 роки тому</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
